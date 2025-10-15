@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { authClient } from "$lib/auth-client";
-	import { Button } from "$lib/components/ui/button";
+	import { Button } from "$lib/components/ui/button/index.js";
 
 	const { data } = $props();
 </script>

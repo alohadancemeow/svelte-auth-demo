@@ -1,5 +1,6 @@
 <script lang="ts">
 	import "../app.css";
+
 	let { children } = $props();
 </script>
 
@@ -7,4 +8,8 @@
 	<title>svelte-starter</title>
 </svelte:head>
 
-{@render children()}
+<div>
+	<main class="mx-auto antialiased">
+		{@render children?.()}
+	</main>
+</div>
