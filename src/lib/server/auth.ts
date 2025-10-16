@@ -2,19 +2,11 @@ import { env } from "$env/dynamic/private";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { db } from "./db";
-import * as schema from "./schema";
 
 export const auth = betterAuth({
 	baseURL: env.PUBLIC_BASE_URL,
 	database: drizzleAdapter(db, {
 		provider: "sqlite",
-		schema: {
-			...schema,
-			user: schema.user,
-			session: schema.session,
-			verification: schema.verification,
-			account: schema.account,
-		},
 	}),
 
 	// https://www.better-auth.com/docs/concepts/session-management#session-caching
